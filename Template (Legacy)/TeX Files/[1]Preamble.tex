@@ -1,0 +1,696 @@
+%   Preamble Contents:
+%       - Packages    [Line 7]
+%       - Commands    [Line 444]
+%       - Document    [Line 571]
+%       - Tips        [Line 623]
+
+%-----------|--------------------------|-----------%
+%           |                          |           %
+%-----------|         PACKAGES         |-----------%
+%           |__________________________|           %
+%---%%%%%%%%%%%%%---% PACKAGES %---%%%%%%%%%%%%%---%
+
+%===============================================
+%---Input---
+
+\usepackage[french,main=english]{babel} 
+%   Hyphenation and typographical rules for a language
+
+\usepackage[utf8]{inputenc} 
+%   Input encoding
+
+\usepackage[TS1,T1]{fontenc} 
+%   Fonts encoding
+
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{Extras/References.bib}
+%   Citations and references
+
+\usepackage{xcolor}
+%   Colors for words and boxes
+\definecolor{corUrl}{RGB}{135,99,219}   %\
+\definecolor{corLinks}{RGB}{135,99,219} % > Pretty 
+\definecolor{corCite}{RGB}{135,99,219}  %/
+\definecolor{DarkBlue}{RGB}{47,47,79}%{0,34,102}
+\definecolor{ultramarine}{RGB}{0,32,96}
+\definecolor{brownb}{RGB}{153,51,0}
+\definecolor{corIFUSP}{RGB}{15,102,136}
+
+\definecolor{ifBlue}{RGB}{15,102,136}%{234,83,70} not so red lol	 headers and hyperlinks
+\definecolor{ifDarkBlue}{RGB}{91,27,22}%{91,27,22}   % text color in console (draft mode)
+\definecolor{ifDarkerBlue}{RGB}{6,8,21}%{51,8,6}   % background color in console
+\definecolor{fgLightRed}{RGB}{184,213,228}%{241,167,159}      % table header rows
+\definecolor{fgVeryLightRed}{RGB}{233,247,254}%{248,226,224}  % table normal rows
+\definecolor{fgDeepRed}{RGB}{238,42,36}
+%
+\definecolor{fgYellow}{RGB}{250,165,25}
+\definecolor{fgLightYellow}{RGB}{229,208,66}
+\definecolor{fgVeryLightYellow}{RGB}{255,237,163}
+\definecolor{fgDarkYellow}{RGB}{99,74,33}
+% others
+\definecolor{bgLightGray}{RGB}{235,235,235}     % pseudocode background
+%
+\definecolor{LightGrey}{rgb}{0.96,0.96,0.96}    % title page
+\definecolor{DarkGrey}{rgb}{0.83,0.83,0.83}
+\definecolor{BaseColor}{rgb}{0.64,0.69,0.31}
+\definecolor{fondtitre}{RGB}{0,66,92}
+
+
+
+%===============================================
+%---Figures---
+
+\usepackage{graphicx} 
+%   Manipulate words
+
+\usepackage{subfigure} 
+%   Use small figures inside a larger one
+
+\usepackage{epstopdf}\epstopdfsetup{update} 
+%   Convert .eps to .pdf figures
+
+\usepackage{wrapfig} 
+%   Figures besides text
+
+\usepackage{float} 
+%   H command for figures - put the figure where it appears
+
+\usepackage{caption}
+%   Custom captions
+
+
+
+%===============================================
+%---Math---
+
+\usepackage{amsfonts} 
+%   Mathematical fonts
+
+\usepackage{tensor}
+%   Tensors
+
+\usepackage{amsmath} 
+%   Mathematical structure
+\numberwithin{equation}{subsection}
+
+\usepackage{amssymb} 
+%   Mathematical symbols
+
+\usepackage{amstext} 
+%   Mathematical \text command
+
+\usepackage{slashed} 
+%   Feynman slashed notation
+
+\usepackage{dsfont}
+%   Doublestroke Font
+
+\usepackage{amsthm} 
+%   Typesetting theorems
+
+\usepackage{mathrsfs} 
+%   RSFS fonts
+
+\usepackage{booktabs} 
+%   Enhance the tables
+
+\usepackage{longtable} 
+%   Allow write long tables
+
+\newcommand\bmmax{2} 
+%   New command to avoid several alphabets in mathematical mode
+
+\usepackage{bm} 
+%   To put bold and italic text in math mode
+
+\usepackage{gensymb} 
+%   Generic symbols, as degree, Celsius, per-thousand, etc
+
+\usepackage{textcomp}
+%   More symbols...
+
+%\usepackage{systeme}
+%   Create Linear Systems
+
+%\usepackage{siunitx}
+%   International System of Units (SI)
+
+\usepackage{physics}
+%   Physics notation
+
+\usepackage{mathtools}
+%   Math tools
+
+\usepackage{tikz}
+%   Draw math elements (graphics, etc)   
+
+\usepackage[RPvoltages]{circuitikz}
+%   Draw electric circuits
+
+
+
+%===============================================
+%---Formatting---
+
+\usepackage[a4paper, top=2cm, inner=2cm, outer=2cm, bottom=2cm, includeheadfoot]{geometry} 
+%   Document dimensions
+
+%\usepackage{bibunits} 
+%   Multiple bibliographies
+
+\usepackage{setspace}\onehalfspacing 
+%   space between lines
+
+\usepackage{makeidx} 
+%   creation of indexes
+
+\usepackage{imakeidx}
+
+\makeindex[columns=3, title=Alphabetical Index, intoc]
+
+\usepackage{pdfpages} 
+%   include pdf files
+
+%\usepackage{mcite} 
+%   multiple items in a single citation
+
+\usepackage[Conny]{fncychap} 
+%   Chapter headings styles
+%   Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+
+\usepackage{layout} 
+%   Layout of the document
+  
+\usepackage{url} 
+%   Verbatim for urls
+
+\usepackage{fancyvrb}
+%   Fancy verbatim
+
+\usepackage{multicol} 
+%   Single and multiple columns
+
+\usepackage{enumerate} 
+%   Redefine labels of enumerate
+
+\usepackage{indentfirst} 
+%   Indent first paragraph after section
+
+\usepackage{enumitem} 
+%   Control layout of enumerate
+
+\usepackage{mdframed} 
+%   Frame box around a region
+
+\usepackage{csquotes}
+%   Quotes in the language is used in the text
+
+\usepackage{xspace} 
+%   Commands not to eat spaces
+
+%\usepackage{mhchem} 
+%   Chemical symbols
+
+% \usepackage[numbers, square, merge, sort&compress]{natbib} 
+%   Improved bibliography styles
+
+\usepackage{notoccite}
+%   Avoid citations at TOC   
+
+\usepackage{tablefootnote}
+%   Footnote at table environment 
+
+
+
+%===============================================
+%---Fonts---
+
+%\usepackage[sc, osf]{mathpazo} 
+%   Palatino mathematical font
+
+%\usepackage{cmbright}
+
+%\usepackage{avant} 
+%   Avant Garde font
+
+%\usepackage{helvet} 
+%   Helvetica font
+
+%\usepackage{eulervm} 
+%   Euler virtual math fonts
+
+\usepackage{times} 
+%   Adobe Times Roman font
+
+%\usepackage{mathptmx} 
+%   Times mathematical font
+
+%\usepackage{fourier} 
+%   Utopia fonts
+
+\usepackage{lettrine} 
+%   Old german fonts
+
+\usepackage{aurical} 
+%   Lukas P fonts
+
+%\usepackage{ascii}
+%   Ascii fonts
+
+\usepackage{wasysym} 
+%   WASY2 fonts (astronomical, phonetic, musical, etc)
+
+\usepackage{calligra} 
+%   Calligraphic font
+
+\usepackage{suetterl} 
+%   Schulschriften german font
+
+%\usepackage{euscript} 
+%   Euler script font
+
+%\usepackage[annataritalic]{tengwarscript} 
+%   Tengwar (Elvish - The Lord of the Rings) fonts
+
+%\usepackage[psfonts]{hiero} 
+%   Hieroglyphic fons
+
+\usepackage{trajan}%{\trjnfamily ABCDEFGHIJKLMNOPQRSTUVWXYZ} 
+%   Old Roman font
+
+%\usepackage{CJKutf8} 
+%   Chinese-Japanese-Korean Typesetting
+
+%\usepackage{kotex} 
+%   Korean typesetting
+
+%\usepackage{pxfonts}
+
+%\usepackage{palatino}
+
+%\usepackage{euler}
+
+\usepackage{bbold}
+%   "A geometric sans serif blackboard bold font"
+
+
+
+%===============================================
+%---Miscellaneous---
+
+\usepackage{accents} 
+%   Creation of accents and placement of scripts
+
+\usepackage{chronology}
+%   Createsa timeline   
+
+\usepackage{cancel}
+%   Adds cancel to math environment
+
+\usepackage{fourier-orns}
+%   Adds symbols
+
+\usepackage[most]{tcolorbox}
+%   Colored boxes
+\newtcbtheorem{theo}{Theorem}{}{theorem}
+%   Theorem inside colored boxes
+
+\usepackage{empheq}
+%   
+
+\usepackage{tasks}
+%   New environment tasks, a new list
+
+\usepackage{blkarray}
+%   New environment "Blockarray"
+
+\usepackage{lscape}
+%   
+
+\usepackage{pdflscape}
+%   Rotate the page horizontally
+%   (LaTeX e pdfLaTeX, respectively)
+
+\usepackage{lastpage}
+%   Creates the "Last Page"
+
+\usepackage{blindtext}
+\usepackage{lipsum}
+%    Adds the Lorem ipsum
+
+%\usepackage{etoolbox} %Use carefully!
+
+\usepackage{titling}
+%   Title manipulation
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+\usepackage{tabu}
+%   More useful tables
+
+\usepackage{silence}
+\WarningsOff[everypage]
+%   Suppress warnings related to package everypage
+
+
+
+%===============================================
+%---Special Packages---
+
+%%%%%%%%%%-HYPERREF-%%%%%%%%%%
+
+\usepackage{hyperref}
+%   Hypertext
+
+\hypersetup{
+	colorlinks = true,
+	urlcolor   = blue,
+	linkcolor  = blue,
+	citecolor  = blue,
+	%pdfborder  = {0,0,0},
+	anchorcolor = blue, 
+  filecolor   = blue, 
+  menucolor   = blue, 
+  linktocpage = true, 
+  %bookmarks   = true,
+  %pdfusetitle	
+}
+%   Setups the Hyperef Package
+
+%%%%%%%%%%-FANCYHDR-%%%%%%%%%%
+
+%\setlength{\textwidth}{15cm}
+
+\usepackage{fancyhdr}                          
+%   Decent headers and footers
+
+\pagestyle{fancy}                          
+%   For fancy pages - General document style
+
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}            
+
+\fancyhf{}                                 %- clean configs/all fields
+
+\fancyhead[LO,RE]{\bfseries\thepage}       %- external - page number
+\fancyhead[RO,LE]{\nouppercase{\rightmark}}%- intrnl odd - chap/sect
+
+%\lhead{\raisebox{0.1\height}{\includegraphics[height=25pt]{Images/Cover/LogoIFUSP(mncrm).png}}}
+
+\renewcommand{\headrulewidth}{0.4pt}       %- hdr line width
+\renewcommand{\footrulewidth}{0pt}         %- ft line width (null)
+\addtolength{\headheight}{2.5pt}           %- gap for the hdr line
+%   For fancy pages
+
+\fancypagestyle{plain}{
+   \fancyhead{}                            %- w/o hdrs at clean page
+   \renewcommand{\headrulewidth}{0pt}      %- w/o hdr line
+}
+%   For plain pages
+
+%\pagestyle{fancy}
+%\fancyhead[L]{Sup. Esq.}
+%\fancyhead[C]{Sup. Cent.}
+%\fancyhead[R]{Sup. Dir.}
+
+%\fancyfoot[L]{Inf. Esq.}
+%\fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
+%\fancyfoot[R]{Inf. Dir,}
+
+%\renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0.4pt}
+
+
+%%%%%%%%%%-TOCLOFT-%%%%%%%%%%
+
+%\usepackage{tocloft}
+%\newcommand{\cftdot}{.}
+
+
+%%%%%%%%%%-TITLESEC-%%%%%%%%%%
+
+\usepackage{titlesec}
+%   Section manipulation 
+
+%\titleformat{\section}{\normalfont \Large \bfseries}{ \, \thesection}{2.3ex plus .2ex}{} 
+% Text "Lecture" is what u wld like the section nmbr to dsply w/.
+\titlespacing{\subsection}{2em}{*1}{*1}
+
+\titleformat{\section}{\normalfont\Large\bfseries}{}{0pt}{}
+%   Removes the numbers before section titles
+
+%   Titlesec configs
+
+
+%%%%%%%%%%-BACKGROUND-%%%%%%%%%%  
+
+\usepackage[pages=some]{background}
+%   Backgrounds
+
+\backgroundsetup{
+scale=1,
+color=black,
+opacity=0.25,
+angle=0,
+contents={
+  \includegraphics[width=\paperwidth,height=\paperheight]{../Images/Cover/Background.png}
+  }
+}
+%   Background config
+
+
+%%%%%%%%%%-LAST PACKAGES-%%%%%%%%%%
+
+%ALWAYS COMPILE W/ THOSE PACKAGES AT THE END AND AT THIS ORDER
+%Unless the package in question explicitly says otherwise
+%(U can remove the optional arguments if you wants)
+
+\usepackage[english]{varioref} 
+%   Better references
+
+\usepackage[capitalize,english]{cleveref} 
+%   Clever references
+
+%-----------|--------------------------|-----------%
+%           |                          |           %
+%-----------|         COMMANDS         |-----------%
+%           |__________________________|           %
+%---%%%%%%%%%%%%%---% COMMANDS %---%%%%%%%%%%%%%---%
+
+%===============================================
+%---Math---
+
+%%%%%%%%%%-SYMBOLS AND LETTERS-%%%%%%%%%%
+
+\newcommand{\pa}{\partial}
+\renewcommand{\S}{\mathcal{S}}      % Mathcal
+\newcommand{\D}{\mathcal{D}}        % Mathcal
+\newcommand{\F}{\mathcal{F}}        % Mathcal
+\newcommand{\M}{\mathcal{M}}        % Mathcal
+\renewcommand{\P}{\mathcal{P}}      % Mathcal
+\renewcommand{\L}{\mathcal{L}}      % Mathcal
+\renewcommand{\O}{\mathcal{O}}      % Mathcal
+\renewcommand{\v}{\mathcal{v}}      % Mathcal
+\renewcommand{\H}{\mathcal{H}}      % Mathcal
+\newcommand{\I}{\mathcal{I}}      % Mathcal
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\Re}{\mathfrak{Re}}
+\renewcommand{\Im}{\mathfrak{Im}}
+\newcommand{\dg}{\dagger}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\keV}{{\rm keV}}        % Energy
+\newcommand{\MeV}{{\rm MeV}}        % Energy
+\newcommand{\GeV}{{\rm GeV}}        % Energy
+\newcommand{\TeV}{{\rm TeV}}        % Energy
+\newcommand{\pmns}{U_{\rm{PMNS}}}
+
+
+%%%%%%%%%%-ELEMENTS-%%%%%%%%%%
+
+\newcommand{\der}[2]{\frac{d#1}{d#2}}
+\newcommand{\derf}[2]{\frac{\delta#1}{\delta#2}}
+\newcommand{\dder}[2]{\frac{d^2#1}{d#2^2}}
+\newcommand{\parc}[2]{\frac{\partial#1}{\partial #2}}
+\newcommand{\pparc}[2]{\frac{\partial^2#1}{\partial #2^2}}
+\newcommand{\crea}[2]{\hat{#1}^{\dag}_{#2}}
+\newcommand{\des}[2]{\hat{#1}_{#2}}
+\newcommand{\esp}[1]{\left[#1\right]}
+\newcommand{\corc}[1]{\left(#1\right)}
+\newcommand{\llav}[1]{\left\{#1\right\}}
+\newcommand{\h}[1]{\hat{#1}}
+\newcommand{\f}{f_{\nu_{j}}(\va{p},\va{P})}
+\newcommand{\fd}{f^{*}_{\nu_{j}}(\va{p},\va{P})}
+\newcommand{\sge}{\sigma_{p}^2}
+\newcommand{\sprod}{\sigma_{p,P}^2}
+\newcommand{\sd}{\sigma_{p,D}^2}
+\newcommand{\al}[1]{\begin{align}\begin{aligned} #1 \end{aligned}\end{align}}
+\newcommand{\inty}{\int^{\infty}_{-\infty}}
+
+
+%%%%%%%%%%-OPERATORS AND FONTS-%%%%%%%%%%
+
+\DeclareMathOperator{\defm}{:=}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\tto}{\longrightarrow}
+%\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+%\DeclareMathAlphabet{\mathbf}{U}{bf}{m}{n}
+%\DeclareMathAlphabet{\mathfrak}{U}{frak}{m}{n}
+
+%%%%%%%%%%-ENVIRONMENTS-%%%%%%%%%%
+
+\newtheorem{definition}{\textcolor{black}{Definition}}
+%   Definition command
+
+\newtheorem{theorem}{\textcolor{black}{Theorem}}[section]
+%   Theorem command
+
+\newtheorem{lemma}[theorem]{\textcolor{black}{Lemma}}
+%   Lemma command
+
+\numberwithin{equation}{section}
+%   Theorem number depends on the section
+
+\renewcommand\qedsymbol{$\blacksquare$} 
+%   Black proof square (QED symbol)
+
+\newcommand{\m}{\text{-}}
+\newcommand{\su}{\begin{bmatrix}
+    0&1\\
+    1&0
+    \end{bmatrix}}
+%   Special unitary group
+
+\newtcolorbox{statement}[1]{
+    enhanced,breakable,
+    attach boxed title to top left={
+    xshift=0.5cm,yshift= -3.5mm, },
+    top=4mm,coltitle=white,
+    beforeafter skip=\baselineskip,
+    title=\textbf{#1}
+}
+
+
+
+%===============================================
+%---Random---
+
+%\renewcommand{\rmdefault}{futs}
+
+\newcommand\exactfbox[1]{\fbox{\hskip1em#1\hskip1em}}
+%   To box more than one line
+
+\newcommand*\schulschrift{\fontfamily{wesu}\selectfont}
+
+\newcommand{\ds}[1]{{\displaystyle #1 }}
+\newcommand*{\pbar}[1]{\accentset{(-)}{#1}}
+\newcommand{\CNB}{{\rm C}\nu{\rm B}}
+
+\newcommand{\asection}[2]{
+\setcounter{section}{#1}
+\addtocounter{section}{-1}
+    \section{#2}
+}
+%   Let u define the section number
+
+
+%%%%%%%%%%%%%%%%%%%%% Margins %%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\marginparwidth}{0pt}
+\setlength{\marginparsep}{0pt}
+
+%%%%%%%%%%%% Initial decorative letters %%%%%%%%%%%%
+
+%\renewcommand{\LettrineFontHook}{\scshape}
+%\setcounter{DefaultLines}{3}
+%\renewcommand{\DefaultLoversize}{0}
+%\AtBeginDocument{\setlength{\DefaultFindent}{0.5em}}
+%\setlength{\DefaultNindent}{0pt}
+%\renewcommand{\DefaultLraise}{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\setcounter{page}{1}
+
+%\ChTitleVar{\large\rm\bf}
+%\ChNameVar{\large\rm\bf}
+%\ChNumVar{\large\bf}
+
+%-----------|--------------------------|-----------%
+%           |                          |           %
+%-----------|         DOCUMENT         |-----------%
+%           |__________________________|           %
+%---%%%%%%%%%%%%%---% DOCUMENT %---%%%%%%%%%%%%%---%
+
+%=======================================================
+\graphicspath{{Images/}}
+%   Path to images folder
+
+\makeindex
+%   Creates the index
+
+\setlength{\parindent}{2em}
+%   Paragraphs indentation size
+
+\makeatletter
+\def\@seccntformat#1{%
+  \expandafter\ifx\csname c@#1\endcsname\c@subsection\else
+  \csname the#1\endcsname\quad
+  \fi}
+\makeatother
+%   wtf...
+
+\AtBeginDocument{%
+  \addtolength\abovedisplayskip{0.2\baselineskip}%
+  \addtolength\belowdisplayskip{0.2\baselineskip}%
+%  \addtolength\abovedisplayshortskip{-0.5\baselineskip}%
+%  \addtolength\belowdisplayshortskip{-0.5\baselineskip}%
+}
+
+\addto\captionsenglish{\renewcommand*\contentsname{Summary}}
+%   Change the Summary name
+
+
+
+%-----------|----------------------|-----------%
+%           |                      |           %
+%-----------|         TIPS         |-----------%
+%           |______________________|           %
+%---%%%%%%%%%%%%%---% TIPS %---%%%%%%%%%%%%%---%
+
+%=======================================================
+
+%   To box more than one line:
+%   Use like that:
+%       \begin{empheq}[box=\exactfbox]{align*}
+%           x &= 1 \\
+%           y &= 1
+%       \end{empheq}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%   About summary:
+%\setcounter{tocdepth}{1} % Show sections
+%\setcounter{tocdepth}{2} % + subsections
+%\setcounter{tocdepth}{3} % + subsubsections
+%\setcounter{tocdepth}{4} % + paragraphs
+%\setcounter{tocdepth}{5} % + subparagraphs
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%   Color palette
+%       - Lavender: {135,99,219}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%   Wrap Figure
+%       \begin{wrapfigure}{l}{0.2\textwidth}
+%           \begin{center}
+%           \includegraphics[width=0.2\textwidth]{Images/diagram-20220813.png}
+%           \end{center}
+%           \caption{Birds}
+%           \label{fig:a}
+%       \end{wrapfigure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\setcounter{secnumdepth}{0} - remove section numbering

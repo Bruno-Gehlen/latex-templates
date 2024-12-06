@@ -1,0 +1,95 @@
+% !TEX root = Template (Advanced)/main.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% -DOCUMENT CLASS---
+
+\documentclass{config/class}			% default
+%  \documentclass[light]{config/class}		% light
+%  \documentclass[report]{config/class}		% full
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|
+%%%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%|
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|
+
+%%%-------------------TESTS-------------------%%%
+%TODO Degree to be completed.          			|
+\major{}									   %|
+%												|
+%TODO Course or specialty of degree				|
+\specialization{}							   %|
+%												|
+%TODO TU concerned by the report (...).			|
+\course{}				                       %|
+%												|
+%TODO CTU concerned by the report (optional).	|
+\subcourse{}								   %|
+%%%-------------------------------------------%%%
+
+%	Project titles
+\title{Document title}			% Title
+\subtitle{Document subtitle}	% Subtitle
+
+%	Authors names and group
+\author{
+	 Name LastName %\\
+	%  Name LastName
+}
+\advisor[]{   % Advisor "title" in the brackets
+	% Name LastName
+	% Name LastName
+}
+\group{}
+
+%	Project date
+ \date{\today}
+ \dateUpdt{}
+
+%	Affiliations 
+% 	(u may have to remove the afflt. logo 
+%	in the class.cls document)
+\affiliations{
+    % IFUSP -- Institute of Physics - University of Sao Paulo
+}
+
+%	Project Abstract and Bibliographies
+ \summary{\lipsum[1]}
+\addbibresource{files/bibliography.bib}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|
+%%%%%%%%%%%%%%%%%%%% DOCUMENT  %%%%%%%%%%%%%%%%%%%%|
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|
+
+\begin{document} 
+\frontmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\maketitle	% Create the title page
+
+\sloppy
+
+\mainmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\NewChap
+\part*{Parte I.}
+
+% \include{chapters/Chapter1.tex}
+
+% \include{chapters/Chapter2.tex}
+
+\backmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% -BIBLIOGRAPHY---
+
+% \MyBibliography
+% \nocite{Wei1989}	% Extra bib (no cited)
+
+\end{document}
+
+% 	W.I.P
+%	- Tests Session
+%	- Part without "*" option
+%	- Equations numbers (label)
+%	- compile single chapters
+%	- bugged fancyhdr at single chapter file [preamble]

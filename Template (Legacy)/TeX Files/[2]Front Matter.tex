@@ -1,0 +1,85 @@
+\thispagestyle{plain}
+\pagenumbering{gobble}
+\BgThispage
+
+%---Comandos Capa--------------
+\newcommand{\titulo}{\textbf{Title}} %Title
+\newcommand{\subtitulo}{\textbf{Subtitle}} %Subtitle
+\newcommand{\disciplina}{Code - Name} %Code and subject
+\newcommand{\prof}{Teacher} %Teacher's Name
+\newcommand{\data}{\today} %Date (Spcfc or Tdy(\today))
+\newcommand{\eu}{Name ----} %Name
+\newcommand{\nusp}{N$\degree$USP --------} %USP Nº
+\newcommand{\email}{---@usp.br} %Email
+\newcommand{\orgao}{Universidade de São Paulo} %Local
+\newcommand{\instituto}{Instituto de Física} %Institute
+
+%---Logo do IFUSP-----------------
+\begin{figure}[h]
+%\vspace{2cm}
+\centering
+  \includegraphics[scale=0.5]{../Images/Cover/LogoIFUSP.png}
+  \label{fig:LogoIFUSP}
+\end{figure}
+
+%\title{Título}
+%\maketitle
+%Título-----------------
+\begin{center}
+\vfill
+%\vspace{2cm}
+{\Huge{\textcolor{corIFUSP}{\titulo}}}\\
+\vspace{0.5ex}
+\rule[1ex]{0.25\textwidth}{1pt}\\
+{\LARGE{\textcolor{corIFUSP}{\subtitulo}}}\\
+\end{center}
+
+
+%Dados do documento-----------------
+\begin{center}
+    \large{
+    \textsc{
+    \orgao \\
+    \instituto \\
+    \disciplina\\
+    \prof\\
+    \data
+    }
+    }
+\vfill
+%\vspace{3cm}
+\end{center}
+
+
+%Dados pessoais-----------------
+\begin{flushright}
+    \large{
+    \eu \\
+    \nusp \\
+    \email
+    }
+\end{flushright}
+\vfill
+%\vspace{3cm}
+
+
+%Endereço-----------------
+\begin{center}
+    Instituto de Física - USP\\
+    Rua do Matão, N. 1371, CEP 05508-090\\
+    Cidade Universitária, São Paulo - Brasil\\
+\end{center}
+
+
+%-------------------
+%Sumário <-----
+\newpage
+\thispagestyle{plain}
+\tableofcontents
+
+
+%-------------------------------
+%Começo do documento <-----
+\newpage
+\pagestyle{fancy}
+\pagenumbering{arabic}
